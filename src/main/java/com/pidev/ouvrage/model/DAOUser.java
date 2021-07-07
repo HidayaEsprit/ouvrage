@@ -16,6 +16,18 @@ public class DAOUser {
 	@Column
 	private String role;
 
+	@Column
+	private String email;
+	
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	public String getRole() {
 		return role;
 	}
@@ -40,4 +52,26 @@ public class DAOUser {
 		this.password = password;
 	}
 
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public DAOUser(long id, String username, String password, String role, String email) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.role = role;
+		this.email = email;
+	}
+
+	public DAOUser() {
+		super();
+	}
+
+	
 }

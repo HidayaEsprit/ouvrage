@@ -7,6 +7,6 @@ import com.pidev.ouvrage.model.Feedback;
 public interface FeedBackRepository extends JpaRepository<Feedback, Long>{
 	
 	
-	// Save (ajout), FindById , FindAll , DeleteById ... In progress (prédéfinis)
+	// Jpa Repository textendi pour --> Save (ajout), FindById , FindAll , DeleteById ... In progress (prédéfinis)
 
 }

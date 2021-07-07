@@ -1,16 +1,16 @@
 package com.pidev.ouvrage.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.pidev.ouvrage.model.DAOUser;
-
-
+import com.pidev.ouvrage.model.Likes;
 @Repository
-public interface UserRepository extends JpaRepository<DAOUser, Long> {
-	DAOUser findByUsername(String username);
-	@Query("SELECT max(user) FROM Likes")
-	DAOUser getMaxLikes();
+public interface LikesRepository extends JpaRepository<Likes, Long>{
 
+
+	
 }
