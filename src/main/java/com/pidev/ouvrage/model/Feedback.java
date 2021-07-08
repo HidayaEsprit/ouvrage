@@ -13,6 +13,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 @Entity
 @Table(name="Feedback")
 public class Feedback implements Serializable{
@@ -25,10 +28,10 @@ public class Feedback implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	private String nomCom ;
-	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(iso=DateTimeFormat.ISO.DATE)
 	private Date dateCom;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne
 	private DAOUser user;
 	
 	public Long getId() {
@@ -56,6 +59,19 @@ public class Feedback implements Serializable{
 		super();
 		this.nomCom = nomCom;
 		this.dateCom = dateCom;
+	}
+	public Feedback(Long id, String nomCom, Date dateCom, DAOUser user) {
+		super();
+		this.id = id;
+		this.nomCom = nomCom;
+		this.dateCom = dateCom;
+		this.user = user;
+	}
+	public DAOUser getUser() {
+		return user;
+	}
+	public void setUser(DAOUser user) {
+		this.user = user;
 	}
 	
 	

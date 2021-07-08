@@ -1,13 +1,13 @@
-package com.pidev.ouvrage;
+// package com.pidev.ouvrage;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+// import org.junit.jupiter.api.Test;
+// import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class OuvrageApplicationTests {
+// @SpringBootTest
+// class OuvrageApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+// 	@Test
+// 	void contextLoads() {
+// 	}
 
-}
+// }
